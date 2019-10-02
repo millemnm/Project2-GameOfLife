@@ -1,20 +1,22 @@
 # Project2-GameOfLife
-Max Miller
+## Max Miller
 2317020
 MaxMiller@chapman.edu
 
-Commands to run:
-  g++ *.cpp
-  ./a.out
+## Commands to run:
+```bash
+g++ *.cpp
+./a.out
+```
 
-Files:
+## Files:
   main.cpp
   GoL.h
   GoL.cpp
   Neighborhood.h
   Neighborhood.cpp
 
-Sources:
+## Sources:
   https://www.geeksforgeeks.org/create-dynamic-2d-array-inside-class-c/
   https://www.geeksforgeeks.org/clearing-the-input-buffer-in-cc/
   https://www.geeksforgeeks.org/system-call-in-c/#targetText=Some%20common%20uses%20of%20system,make%20the%20screen%2Fterminal%20clear.

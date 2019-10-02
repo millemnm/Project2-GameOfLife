@@ -89,6 +89,9 @@ void GoL::gameMode(){//asks user which parameters to use to create the game
 	}else{
 		randFill();
 	}
+	
+	std::cin.clear();
+	std::cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }
 
 //World Creation:

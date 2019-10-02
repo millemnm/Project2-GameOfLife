@@ -37,7 +37,7 @@ GoL::~GoL(){
 void GoL::gameMode(){//asks user which parameters to use to create the game
 
 	//Choose game mode
-	std::cout << "Which Game Mode do you want to play?\n[1] - Classic Mode\n[2] - Doughnut Mode\n[3] - Mirror Mode" << endl;
+	std::cout << "Which Game Mode do you want to play?\n[1] - Classic Mode\n[2] - Donut Mode\n[3] - Mirror Mode" << endl;
 	std::cin >> mode;
 	while(mode != 1 && mode != 2 && mode != 3){
 		std::cin.clear();
@@ -219,7 +219,7 @@ void GoL::play(){//Makes sure the correct game mode is played each round
 			if(mode == 1){
 				neighbors = classic(x,y);
 			}else if(mode == 2){
-				neighbors = doughnut(x,y);
+				neighbors = donut(x,y);
 			}else{
 				neighbors = mirror(x,y);
 			}
@@ -296,7 +296,7 @@ int GoL::classic(int x,int y){//[1] walls are empty
 	}
 	return n;
 }
-int GoL::doughnut(int x,int y){//[2] walls are connected in a loop
+int GoL::donut(int x,int y){//[2] walls are connected in a loop
 	int n = 0;
 	if(x != 0){
 		if(past->get(x-1,y)){ //check to the left
@@ -312,8 +312,8 @@ int GoL::doughnut(int x,int y){//[2] walls are connected in a loop
 				++n;
 			}
 		}
-	}else{//Doughnut
-		if(past->get(xSize-1,y)){//x=0
+	}else{//donut
+		if(past->get(xSize-1,y)){
 			++n;
 		}
 		if(y==0){//corners
@@ -341,7 +341,7 @@ int GoL::doughnut(int x,int y){//[2] walls are connected in a loop
 				++n;
 			}
 		}
-	}else{//Doughnut
+	}else{//donut
 		if(past->get(x,y)){//x=xSize
 			++n;
 			if(y==0 || y==ySize-1){//corners
@@ -366,7 +366,7 @@ int GoL::doughnut(int x,int y){//[2] walls are connected in a loop
 		if(past->get(x,y-1)){ //check up
 			++n;
 		}
-	}else{//Doughnut
+	}else{//donut
 		if(past->get(x,ySize-1)){
 			++n;
 		}
@@ -375,7 +375,7 @@ int GoL::doughnut(int x,int y){//[2] walls are connected in a loop
 		if(past->get(x,y+1)){ //check down
 			++n;
 		}
-	}else{//Doughnut
+	}else{//donut
 		if(past->get(x,0)){
 			++n;
 		}

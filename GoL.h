@@ -15,7 +15,7 @@ class GoL{
 	private:
 
 		int classic(int x, int y);
-		int doughnut(int x, int y);
+		int donut(int x, int y);
 		int mirror(int x, int y);
 
 		void fileFill();
